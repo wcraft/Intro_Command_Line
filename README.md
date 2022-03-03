@@ -9,35 +9,67 @@ In the class today, we are going to receive some leaked data, make a home for ou
 
 [Data](https://drive.google.com/drive/folders/13iIKLBNqXgSqbW6rd7dR7ehrdsKBUOaZ?usp=sharing)
 
+## Command Cheatsheet
+Here are the commands we'll use in class and what they do. Consult this if you get lost.
+#### Commands
+`pwd` - **p**rint **w**orking **d**irectory, this command tells you where you are in your computer, literally where the folder you are in is located on your computer. If you get lost and are unsure where you are, type `pwd` and it will tell you where you are.
+
+`ls` - **l**i**s**t, the `ls` command lists the contents of a directory. You can use `ls` in a few different ways. Typing `ls` with no other arguments lists the contents of the directory you are currently in. You can also specify which folder you would like to see the contents of, like so: `ls $DIR` (`$DIR` is shorthand for a specific directory you specify on the command line). `ls Downloads` will show you all the files and folders in `Downloads`
+
+`cd` - **c**hange **d**irectory, you use `cd` to say which directory you want to move into. You need to specify which folder you want to move into, and that folder needs to be beneath you in the file structure. Usage: `cd $DIR` moves you into the directory you specify. (`$DIR` is shorthand for a specific directory you specify on the command line). `cd Downloads` moves you into the `Downloads` folder.
+
+`mv` - **m**o**v**e, `mv` is used to move a file from one location to another. Usage: `mv $FILE $LOCATION`, which means it moves the file you specify (`$FILE` is a shorthand for a specific file name) to a location you specify.
+
+`cat` - `cat $FILE` prints what is inside the file you specify to the output of the command line.
+
+#### Shortcuts
+`~` - The tilde, when used on the command line or in a file path, is short for your home folder. This usually the folder that you are in when you open the command line. You can use the `~` to quickly get back to your home folder by running `cd ~`, which is the command for change directory to the home folder.
+
+`cd ..` - This is the command for going back up into the directory above the one you are in. Let's say that you have `my_folder/Downloads/investigation` and you are in `Downloads`, running `cd ..` will put you in `my_folder`
+
+#### Terminology
+GUI - Graphical user interface
+
+CLI - Command line interface, or the command line.
+
+STDIN - Computer jargon for where you are typing stuff into the command line
+
+STDOUT - Computer jargon for where the command line prints stuff out to.
+
+Directory - Another word for folder. When you open Finder and look at some files, you are viewing a directory'
+
+Utility - Another word for a command line tool
+
+Argument - The arguments you pass to the command line tool. You need to pass arguments to the tool when it needs to know exactly what to work on, like a filename or a directory. When you write `cd Downloads` to move into `Downloads`, the directory name `Downloads` is the arugment.
+
 
 ## Class Notes
 Class will follow the [slides](https://docs.google.com/presentation/d/1oL0rNS2DYkMhfaYe6mosHkYFBm69ypuLtqqkqXHiHPc/edit?usp=sharing). Here are the notes for the session.
+
+
 - Intro
   - Will Craft, data reporter for APM Reports and the podcast In The Dark
   - Goal of the class: get you familiar with the command line. I am NOT going to teach you everything you ever need to know, but you’ll leave the class knowing how to use the command line to learn other things. There are thousands of tools you can use from the command line
     - examples: removing duplicates from a dataset, moving thousands of files with a few keystrokes, uploading data to databases.
 
 - Agenda
-  - Making a home for a project using familiar tools
-  - Making a home for a project using unfamiliar tools
-    - What is the command line? Some useful definitions
-    - How to read and write stuff on the command line
-    - Useful commands
-    - Making a home for the project
+  - Why learn the command line?
+  - What is the command line?
+  - How to read and write on the command line, plus some definitions
+  - Someone leaked us some data!
+  - Building a home for our project
+  - Learning a new tool
 
-- Someone leaked us some data!
+- Why Learn the Command Line?
+  - The command line is an incredibly powerful tool that allows you to do a whole lot on your computer. Here are some classes at NICAR that I want to prepare you to go learn
+    - Finding needles in haystacks with fuzzy matching
+      - Fuzzy Matching: matching bits of data when they are spelled slightly different, like matching "LA Dodgers" and "Los Angeles Dodgers", its literally measuring the similarity between two differnt pieces of text.
+    - Advanced PDF processing with OCR and command-line tools
+      - We've all been there, getting documents that have our valuable, valuable data stored in paper. There are plenty of command line tools that help you open up the PDF and pull the data out of the document. 
 
-- Make a home for the project using Finder
-  - Steps:
-    1. Make a folder for the project and make folders for data
-      - open Finder (the mac GUI)
-    2. Download the Data to Downloads (or find it in Downloads)
-    3. Inspect the files
-      - use space bar to inspect the contents
-    4. Move the data into new folders
-      - create new folders
 
 - Now we'll do the same using the command line! But first... What is the command line?
+  - short answer, its a way to directly give your computer commands. You are telling your computer to do stuff and it can be VERY powerful
 
 - Text-based video games
   - maybe you've played an old video game where you typed commands to your character and they do something. Basically this is what we do with the command line
@@ -108,16 +140,9 @@ Class will follow the [slides](https://docs.google.com/presentation/d/1oL0rNS2DY
   - other useful commands (pbcopy, pipes)
 
 
-## Terminology
-GUI - graphical user interface
-CLI - command line interface, or the command line.
-STDIN -
-STDOUT -
-
-
 ## Other Classes here at NICAR22
-Finding needles in haystacks with fuzzy matching
-Advanced PDF processing with OCR and command-line tools
+[Finding needles in haystacks with fuzzy matching](https://schedules.ire.org/nicar-2022#2095)
+[Advanced PDF processing with OCR and command-line tools](https://schedules.ire.org/nicar-2022#2066)
 Intro to R or Intro to Python.
 
 ## Other Online Resources
