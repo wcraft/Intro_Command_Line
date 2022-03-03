@@ -3,11 +3,11 @@
 ## Goal of the class
 Our goal today is to get everyone to a point where they feel comfortable opening the command line, navigating files, and learning something new. There are a lot of command line tools you can learn to use at NICAR, but those can be super intimidating if you have never used it before. My goal is that everyone is going to leave class today ready, willing, and able to use the command line and learn new command line tools.
 
-In the class today, we are going to receive some leaked data, make a home for our reporting on our computer, inspect the data, and do some very minor changes to it. We are first going to do all this the way that we all know how, using the computer's graphical interface. Then we are going to do everything using the command line!
+In the class today, we are going to learn about the command line, receive some leaked data, make a home for our reporting on our computer, and inspect the data. We'll learn some command line tools, and learn how to learn new tools as well. 
 
 [Slides](https://docs.google.com/presentation/d/1oL0rNS2DYkMhfaYe6mosHkYFBm69ypuLtqqkqXHiHPc/edit?usp=sharing)
 
-[Data](https://drive.google.com/drive/folders/13iIKLBNqXgSqbW6rd7dR7ehrdsKBUOaZ?usp=sharing)
+[Data](https://drive.google.com/drive/folders/13iIKLBNqXgSqbW6rd7dR7ehrdsKBUOaZ?usp=sharing) (If you are in-person at NICAR22, you don't need to download the data, its been downloaded for you)
 
 ## Command Cheatsheet
 Here are the commands we'll use in class and what they do. Consult this if you get lost.
@@ -19,6 +19,8 @@ Here are the commands we'll use in class and what they do. Consult this if you g
 `cd` - **c**hange **d**irectory, you use `cd` to say which directory you want to move into. You need to specify which folder you want to move into, and that folder needs to be beneath you in the file structure. Usage: `cd $DIR` moves you into the directory you specify. (`$DIR` is shorthand for a specific directory you specify on the command line). `cd Downloads` moves you into the `Downloads` folder.
 
 `mv` - **m**o**v**e, `mv` is used to move a file from one location to another. Usage: `mv $FILE $LOCATION`, which means it moves the file you specify (`$FILE` is a shorthand for a specific file name) to a location you specify.
+
+`mkdir` - `mkdir` is the command to make a directory, usage: `mkdir $DIRNAME`, which means you write the new directory name after the command.
 
 `cat` - `cat $FILE` prints what is inside the file you specify to the output of the command line.
 
@@ -65,7 +67,7 @@ Class will follow the [slides](https://docs.google.com/presentation/d/1oL0rNS2DY
     - Finding needles in haystacks with fuzzy matching
       - Fuzzy Matching: matching bits of data when they are spelled slightly different, like matching "LA Dodgers" and "Los Angeles Dodgers", its literally measuring the similarity between two differnt pieces of text.
     - Advanced PDF processing with OCR and command-line tools
-      - We've all been there, getting documents that have our valuable, valuable data stored in paper. There are plenty of command line tools that help you open up the PDF and pull the data out of the document. 
+      - We've all been there, getting documents that have our valuable, valuable data stored in paper. There are plenty of command line tools that help you open up the PDF and pull the data out of the document.
 
 
 - Now we'll do the same using the command line! But first... What is the command line?
@@ -73,12 +75,6 @@ Class will follow the [slides](https://docs.google.com/presentation/d/1oL0rNS2DY
 
 - Text-based video games
   - maybe you've played an old video game where you typed commands to your character and they do something. Basically this is what we do with the command line
-
-- definition of CLI, GUI
-    - GUI - graphical user interface. We interact with graphical representations of things to manipulate the computer and give it commands. Windows and the little mouse and all that on the computer is the GUI
-    - CLI - command line interface. Text-based way of giving commands to the computer. When we are talking about the command line, we are talking about the command line interface. Everyone has a program on their computer called Terminal. If you hit command-space and type "Terminal", your computer GUI should show you the program
-
-- famous command lines throughout history
 
 - How to read and write on the command line 1
   - screenshot of the terminal, diagrammed. Also called the shell. The program that allows you to type commadns to the computer
@@ -90,21 +86,6 @@ Class will follow the [slides](https://docs.google.com/presentation/d/1oL0rNS2DY
   - utility - utility is the proper name for the tools & commands that we use on the command line. This is `ls`, which __l__ i __s__ ts the contents.
   - flag - flags change how the utility operates. There are a lot of different flags for pretty much every utility. `ls` with `-G` displays in color, `ls` without `-G` displays in the normal text color
   - arguments - arguments are the things that you want the utility to operate on. Not every utility needs arguments, but most do. This command is saying list the stuff that is inside the folder `apm_reports/training_and_guides`
-
-- introduce commands
-    - pwd - print working directory, tells you where you are in the computer. The space where the terminal prints stuff out to is called the standard output.
-    - mv - command to move
-    - ls - list the contents of a file
-    - cd - change directory, move to a new directory
-    - mkdir -  make a new directory
-    - cat - short for concatinate, prints the contents of a file
-    - introduce shortcuts/tricks
-      - tab completion - hit tab to auto-complete long stuff and show you what might fit.
-      - go back through old commands with the up-arrow
-      - no argument - usually means, do the operation on the current directory
-      - `cd ..` - go up the directory
-      - `man` + utility name - brings up a helpful page with information on the utility, includes details on every flag.
-      - `clear` - clears the terminal of all outputs
 
 - Make a home for the project using Terminal
   - Steps:
@@ -135,9 +116,6 @@ Class will follow the [slides](https://docs.google.com/presentation/d/1oL0rNS2DY
       - Using `cat` on the data sucks, it does not make inspecting spreadsheets on the command line easy at all. So lets learn a new utility, `csvlook`, which is part of the csvkit set of tools for working with CSVs.
       - [csvlook](https://csvkit.readthedocs.io/en/latest/scripts/csvlook.html)
 
-- Advanced (if we have time)
-  - csvkit (practice how to read instructions from the web, deal with failure)
-  - other useful commands (pbcopy, pipes)
 
 
 ## Other Classes here at NICAR22
